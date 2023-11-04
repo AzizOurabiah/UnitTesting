@@ -18,7 +18,7 @@ namespace BankAccountLib.MsTest.UnitTests
             Assert.AreEqual(expected, real);
         }
         [TestMethod]
-        public void Debit_ValidAmount_IncrementBalance()
+        public void Debit_ValidAmount_DecrementBalance()
         {
             //Arrange
             BankAccount bankAccount = new BankAccount("Adam", 1000);
