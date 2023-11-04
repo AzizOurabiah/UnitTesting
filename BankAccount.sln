@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccountLib", "BankAccou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountLib.Console.UnitTest", "BankAccountLib.Console.UnitTest\BankAccountLib.Console.UnitTest.csproj", "{3C1E1A15-C66E-4F1D-93D6-A253B88150CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountLib.MsTest.UnitTests", "BankAccountLib.MsTest.UnitTests\BankAccountLib.MsTest.UnitTests.csproj", "{DCBFA728-DC95-4FC2-AD74-4EBFB5A9023E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3C1E1A15-C66E-4F1D-93D6-A253B88150CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C1E1A15-C66E-4F1D-93D6-A253B88150CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C1E1A15-C66E-4F1D-93D6-A253B88150CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCBFA728-DC95-4FC2-AD74-4EBFB5A9023E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCBFA728-DC95-4FC2-AD74-4EBFB5A9023E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCBFA728-DC95-4FC2-AD74-4EBFB5A9023E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCBFA728-DC95-4FC2-AD74-4EBFB5A9023E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
