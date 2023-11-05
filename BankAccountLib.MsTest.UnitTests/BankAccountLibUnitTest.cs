@@ -64,10 +64,19 @@ namespace BankAccountLib.MsTest.UnitTests
             var sut = new BankAccount("Adam", 1000);
 
             //Act
-            //sut.Debit(2000);
-
             //Assert
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => sut.Debit(2000));
+        }
+        [TestMethod]
+        [TestCategory("Credit")]
+        public void Credit_MaxAmount_ThrowException2()
+        {
+            //Arrange
+            var sut = new BankAccount("Adam", 1000);
+
+            //Act
+            //Assert
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => sut.Credit(int.MaxValue));
         }
     }
 }
