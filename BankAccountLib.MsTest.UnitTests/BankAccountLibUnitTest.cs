@@ -4,6 +4,7 @@ namespace BankAccountLib.MsTest.UnitTests
     public class BankAccountLibUnitTest
     {
         [TestMethod]
+        [TestCategory("Credit")]
         public void Credit_ValidAmount_IncrementBalance()
         {
             //Arrange
@@ -18,6 +19,7 @@ namespace BankAccountLib.MsTest.UnitTests
             Assert.AreEqual(expected, real);
         }
         [TestMethod]
+        [TestCategory("Debit")]
         public void Debit_ValidAmount_DecrementBalance()
         {
             //Arrange
@@ -30,6 +32,29 @@ namespace BankAccountLib.MsTest.UnitTests
 
             //Assert
             Assert.AreEqual(expected, real);
+        }
+        [TestMethod]
+        [TestCategory("Debit")]
+        [Ignore("Bad Test case o catch Exception inside the test methode")]
+        public void Debit_AmountBiggerThenBalance_ThrowException()
+        {
+            //Arrange
+            var sut = new BankAccount("Adam", 1000);
+
+            //Act
+            try
+            {
+                sut.Debit(2000);
+            }
+            catch(ArgumentOutOfRangeException ex)
+            {
+                //var actual = sut.Balance;
+                //double expected = 0;
+
+                //Assert
+                //Assert.AreEqual(expected, actual);
+                Assert.AreEqual("amount",ex.ParamName);
+            } 
         }
     }
 }
