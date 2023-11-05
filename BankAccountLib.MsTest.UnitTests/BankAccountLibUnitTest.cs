@@ -35,7 +35,7 @@ namespace BankAccountLib.MsTest.UnitTests
         }
         [TestMethod]
         [TestCategory("Debit")]
-        [Ignore("Bad Test case o catch Exception inside the test methode")]
+        [Ignore("Bad Test case catch Exception inside the test methode")]
         public void Debit_AmountBiggerThenBalance_ThrowException()
         {
             //Arrange
@@ -55,6 +55,19 @@ namespace BankAccountLib.MsTest.UnitTests
                 //Assert.AreEqual(expected, actual);
                 Assert.AreEqual("amount",ex.ParamName);
             } 
+        }
+        [TestMethod]
+        [TestCategory("Debit")]
+        public void Debit_AmountBiggerThenBalance_ThrowException2()
+        {
+            //Arrange
+            var sut = new BankAccount("Adam", 1000);
+
+            //Act
+            //sut.Debit(2000);
+
+            //Assert
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => sut.Debit(2000));
         }
     }
 }
